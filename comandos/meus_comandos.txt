@@ -6,9 +6,12 @@ service firewalld stop
 $HADOOP_HOME/sbin/start-dfs.sh
 $HADOOP_HOME/sbin/start-yarn.sh
 
+# Iniciar serviço Mysql
+sudo systemctl start mysqld
+sudo systemctl status mysqld
+sudo mysql_secure_installation
 
-
-scp -rv -i "~/.ssh/hdp-key" /opt/hadoop  hadoop@hdpslv1:/opt
+scp  mysql-connector-java-5.1.49.jar root@namenode:/opt
 
 # Descompactar tar.gz
 sudo tar -xvf 
@@ -16,3 +19,11 @@ sudo tar -xvf
 
 #procuracao@cartoriodoportao.com.br
 
+
+
+source .bash_profile
+
+
+sqoop list-tables --connect jdbc:mysql://localhost:3306/base_teste --driver com.mysql.jdbc.Driver --username user --password Lucas21@
+
+sqoop import --connect jdbc:mysql://localhost:3306/base_teste --driver com.mysql.jdbc.Driver --username user --password Lucas21@ --table pessoas
