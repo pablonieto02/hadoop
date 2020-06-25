@@ -1,0 +1,47 @@
+# Instalação Data Lake
+
+# Como usuário ec2-user (em todos os servidores):
+sudo mkdir /home/hadoop/.ssh
+sudo chown -R hadoop:hadoop /home/hadoop/
+sudo cp ~/.ssh/authorized_keys /home/hadoop/.ssh/authorized_keys
+sudo chown hadoop:hadoop /home/hadoop/.ssh/authorized_keys
+sudo chmod 600 /home/hadoop/.ssh/authorized_keys
+
+
+# Configurando o SSH (nos 3 servidores do cluster)
+sudo vi /etc/ssh/sshd_config
+
+
+# Certifique-se que estas configurações estejam ativas:
+
+Port 22
+#AddressFamily any
+ListenAddress 0.0.0.0
+ListenAddress ::
+PubkeyAuthentication yes
+
+
+# Restart do SSH
+sudo systemctl restart sshd.service
+
+
+# Apenas no Node Master (como usuário hadoop)
+cd ~
+ssh-keygen
+
+
+# Copia a chave
+
+Em cada node slave, copie a chave id_rsa.pub do servidor node master
+
+
+# Em todos os servidores como usuário Hadoop
+cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
+
+
+# Testa a conexão (usando DNS interno)
+
+ssh hadoop@ip-172-31-7-63.us-east-2.compute.internal
+ssh hadoop@ip-172-31-2-100.us-east-2.compute.internal
+ssh hadoop@ip-172-31-14-249.us-east-2.compute.internal
+

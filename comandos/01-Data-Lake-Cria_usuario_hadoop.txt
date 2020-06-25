@@ -1,0 +1,8 @@
+# Instalação Data Lake
+
+# Criando usuário hadoop (nos 3 servidores do cluster)
+
+sudo useradd -m hadoop
+sudo passwd hadoop (datalake9182)
+
+Obs: Inclua o usuário hadoop no arquivo /etc/sudoers

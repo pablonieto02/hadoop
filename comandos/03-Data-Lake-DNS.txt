@@ -1,0 +1,3 @@
+# Instalação Data Lake
+
+# Não é recomendável editar o arquivo hosts nas instâncias EC2. O ideal é usar os endereços DNS públicos e privados fornecidos pela AWS para cada instância.
