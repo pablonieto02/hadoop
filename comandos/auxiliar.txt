@@ -14,10 +14,7 @@ sudo mysql_secure_installation
 scp  mysql-connector-java-5.1.49.jar root@namenode:/opt
 
 # Descompactar tar.gz
-sudo tar -xvf 
-
-
-#procuracao@cartoriodoportao.com.br
+sudo tar -xvf
 
 
 
