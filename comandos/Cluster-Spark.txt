@@ -6,7 +6,7 @@ O Spark pode ser executado como um gerenciador de cluster independente ou aprove
 
 O procedimento abaixo considera que você tem um cluster Hadoop configurado e em execução (com os serviços HDFS e YARN inicializados)
 
-
+ 
 # Caso os serviços ainda não estejam iniciados, inicie-os:
 
 $HADOOP_HOME/sbin/start-dfs.sh
