@@ -86,8 +86,8 @@ ip-172-31-14-249.us-east-2.compute.internal
 </configuration>
 
 
-
-# Editar o arquivo vi  e adicionar as linhas:
+$HADOOP_HOME/etc/hadoop/yarn-default.xml
+# Editar o arquivo vi $HADOOP_HOME/etc/hadoop/yarn-site.xml  e adicionar as linhas:
 
 <configuration>
 

@@ -4,7 +4,8 @@ Spark é um sistema de computação em cluster de uso geral. Ele pode implementa
 
 O Spark pode ser executado como um gerenciador de cluster independente ou aproveitando as estruturas de gerenciamento de cluster dedicadas, como Apache Hadoop YARN ou Apache Mesos.
 
-O procedimento abaixo considera que você tem um cluster Hadoop configurado e em execução (com os serviços HDFS e YARN inicializados)
+O procedimento abaixo considera quy
+e você tem um cluster Hadoop configurado e em execução (com os serviços HDFS e YARN inicializados)
 
  
 # Caso os serviços ainda não estejam iniciados, inicie-os:
@@ -50,7 +51,7 @@ mv $SPARK_HOME/conf/spark-defaults.conf.template $SPARK_HOME/conf/spark-defaults
 spark.master    yarn
 
 
-##############################################################################################################
+#####################################p#########################################################################
 
 Os jobs (processamento de dados) do Spark podem ser executados no YARN em dois modos: modo de cluster e modo de cliente. Entender a diferença entre os dois modos é importante para escolher uma configuração de alocação de memória apropriada e para enviar jobs conforme o esperado.
 

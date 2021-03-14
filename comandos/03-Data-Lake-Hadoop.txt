@@ -22,7 +22,7 @@ cd /opt/hadoop/bin
 ./hadoop version
 
 
-# Variáveis de ambiente do usuário Hadoop (configurar em todos os servidores)
+# Variáveis de ambiente do usuário Hadosop (configurar em todos os servidores)
 
 vi .bash_profile
 

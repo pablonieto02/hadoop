@@ -35,6 +35,7 @@ hdfs dfs -ls /datasets
 # Executando o Job de processamento de MapReduce via YARN (contagem de palavras no arquivo)
 
 yarn jar $HADOOP_HOME/share/hadoop/mapreduce/hadoop-mapreduce-examples-3.1.0.jar wordcount "/datasets/questoes.csv" output
+yarn jar $HADOOP_HOME/share/hadoop/mapreduce/hadoop-mapreduce-examples-3.2.2.jar wordcount "/datasets/questoes.csv" output
 
 
 # Checando a execução do Job:
