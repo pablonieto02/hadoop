@@ -16,7 +16,7 @@ scp  mysql-connector-java-5.1.49.jar root@namenode:/opt
 # Descompactar tar.gz
 sudo tar -xvf
 
-
+jupyter notebook --no-browser
 
 source .bash_profile
 
@@ -24,3 +24,12 @@ source .bash_profile
 sqoop list-tables --connect jdbc:mysql://localhost:3306/base_teste --driver com.mysql.jdbc.Driver --username user --password Lucas21@
 
 sqoop import --connect jdbc:mysql://localhost:3306/base_teste --driver com.mysql.jdbc.Driver --username user --password Lucas21@ --table pessoas
+
+
+
+df = spark.read.json("/json_thread19.json", multiLine=True)
+
+
+ $ ssh-keygen -t rsa -P '' -f ~/.ssh/id_rsa
+  $ cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
+  $ chmod 0600 ~/.ssh/authorized_keys
